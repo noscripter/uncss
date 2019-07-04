@@ -6,7 +6,9 @@
   "license": "MIT",
   "homepage": "https://github.com/giakki/uncss",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "src/uncss.js",
   "bin": {
@@ -42,7 +44,8 @@
     "lodash": "^4.13.1",
     "phridge": "^2.0.0",
     "postcss": "^5.0.21",
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -64,5 +67,6 @@
         "src/utility.js"
       ]
     }
-  }
+  },
+  "snyk": true
 }
